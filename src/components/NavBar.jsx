@@ -22,10 +22,9 @@ export default function Navbar() {
       <div class="flex-1">
         <a class="btn btn-ghost text-xl">RC</a>
       </div>
-      <div class="flex flex-row items-center gap-6">
-        <div class="flex flex-row gap-6">
+      <div class="flex flex-row items-center gap-8">
+        <div class="flex flex-row gap-12">
           {navItems.map((item) => {
-            // Verifica si este ítem corresponde a la página actual
             const isActive = currentPath === item.href;
 
             return (
@@ -40,17 +39,17 @@ export default function Navbar() {
 
                 {/* Línea animada (Efecto Hover y Activo) */}
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-neutral transition-all duration-300 ease-out ${
+                  className={`absolute bottom-0 left-0 h-0.5 bg-neutral transition-all duration-300 ease-out ${
                     isActive
-                      ? "w-full" // Si está activo, se queda completamente subrayado
-                      : "w-0 group-hover:w-full" // Si no, empieza en 0 y crece al hacer hover
+                      ? "w-full"
+                      : "w-0 group-hover:w-full" 
                   }`}
                 />
               </a>
             );
           })}
         </div>
-        <button class="btn btn-neutral flex flex-row gap-2">
+        <button class="btn btn-neutral flex flex-row gap-2 hover:bg-gray-500 hover:border-gray-500">
           <ArrowDownToLine />
           <span>Descargar CV</span>
         </button>

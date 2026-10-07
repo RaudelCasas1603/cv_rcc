@@ -1,9 +1,11 @@
 ---
 // src/layouts/Layout.astro
-import '/src/styles/global.css';
+import "/src/styles/global.css";
+import Navbar from "../components/NavBar";
+import Footer from "../components/Footer";
 ---
 
-<html lang="en">
+<html lang="es-MX">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -11,8 +13,14 @@ import '/src/styles/global.css';
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>RCC Web Desings</title>
+    <script src="https://kit.fontawesome.com/1c719b87a2.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <slot />
+
+  <body class="flex flex-col min-h-screen">
+    <Navbar client:load />
+    <main class="flex-grow px-6 py-4">
+      <slot />
+    </main>
+    <Footer client:load />
   </body>
 </html>
