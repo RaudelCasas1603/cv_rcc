@@ -13,5 +13,8 @@ necesitara un login
 - al realizar la reserva se deden de poder capturar los datos de los usuarios que viajaran 
 - consultar sus viajes activos 
 - consultar el historial de abonos de su viajes y obtener el saldo restante 
-- generar recibos de pagos y poder reimprimir los recibos antiguos 
+- generar recibos de pagos y poder reimprimir los recibos antiguos      
+
+- poder generar cotizaciones ya sean definidas en base a los viajes activos o un viaje personalizado
+- personalizar descuentos o precios especiales 
 
