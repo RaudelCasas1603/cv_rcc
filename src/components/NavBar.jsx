@@ -20,10 +20,10 @@ export default function Navbar() {
   return (
     <div class="navbar bg-base-100 shadow-sm">
       <div class="flex-1">
-        <a class="btn btn-ghost text-xl">RC</a>
+        <a class="btn btn-ghost md:text-lg xl:text-xl font-LibreBaskervilleRegular">RC</a>
       </div>
       <div class="flex flex-row items-center gap-8">
-        <div class="flex flex-row gap-12">
+        <div class="flex flex-row md:gap-6 xl:gap-12">
           {navItems.map((item) => {
             const isActive = currentPath === item.href;
 
@@ -31,7 +31,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`relative py-2 text-base font-medium transition-colors duration-300 ${
+                className={`relative py-2 text-sm xl:text-base font-medium transition-colors duration-300 ${
                   isActive ? "text-neutral" : "text-neutral"
                 } group`}
               >
@@ -57,3 +57,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+
